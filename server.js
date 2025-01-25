@@ -1,6 +1,7 @@
 const bodyParser = require('body-parser');
 const express = require('express');
 const app = express();
+const fetch = require('node-fetch')
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'ejs');
@@ -11,7 +12,8 @@ app.get('/', (req, res) => {
 })
 
 app.get('/view', (req, res) => {
-    res.render('viewer')
+    let number = req.query.s;
+    res.render('viewer', {number: number})
 })
 
 const serverRun = () => {

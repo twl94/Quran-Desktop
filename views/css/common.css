@@ -14,8 +14,6 @@ body {
     background-color: rgb(34, 34, 34);
 }
 
-
-
 .container {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -24,7 +22,7 @@ body {
 
 .surahs {
     overflow: auto;
-    background-color: #131313;
+    background-color: #1c1c1c;
     height: 100vh;
 }
 

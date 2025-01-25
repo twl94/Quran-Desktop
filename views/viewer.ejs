@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/viewer.css">
+</head>
+<body>
+    <h1 id="surahname">Surah Names</h1>
+
+    <script>
+        const apiURI = "https://quran-api-id.vercel.app/surahs/<%= number %>";
+        const surahNameE = document.getElementById('surahname')
+
+        fetch(apiURI).then(res => res.json()).then(json => {
+            let ayahs = json.ayahs;
+            let surahName = json.name;
+            
+            surahNameE.innerHTML = surahName;
+        })
+    </script>
+</body>
+</html>
