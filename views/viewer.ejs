@@ -6,17 +6,32 @@
     <link rel="stylesheet" href="./css/viewer.css">
 </head>
 <body>
-    <h1 id="surahname">Surah Names</h1>
+    <h1 id="surahname">Loading..</h1>
 
+    <div id="ayahs">
+    </div>
+
+    <div class="footer">
+    
+    </div>
+
+
+    <script src="./js/playAyahs.js"></script>
     <script>
         const apiURI = "https://quran-api-id.vercel.app/surahs/<%= number %>";
         const surahNameE = document.getElementById('surahname')
+        const ayahsElem = document.getElementById('ayahs')
 
         fetch(apiURI).then(res => res.json()).then(json => {
             let ayahs = json.ayahs;
             let surahName = json.name;
             
             surahNameE.innerHTML = surahName;
+            
+            ayahs.forEach((elem, i) => {
+                let ayahAudio = json.ayahs[i].audio.alafasy;
+                ayahsElem.innerHTML += `<div id="${i}" onclick="playAyah('${ayahAudio}', this.id, 'play')" class="ayah"><div id='arab'>${ayahs[i].arab}</div></div>`
+            });
         })
     </script>
 </body>

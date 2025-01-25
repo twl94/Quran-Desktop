@@ -65,3 +65,13 @@ body {
 .info {
     margin: 10px;
 }
+
+.small {
+    font-size: 13px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+button {
+    background-color: #1c1c1c;
+}
