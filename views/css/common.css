@@ -73,5 +73,15 @@ body {
 }
 
 button {
-    background-color: #1c1c1c;
+    background-color: #00000053;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s all;
+}
+
+button:hover {
+    background-color: #00000078;
+    border-radius: 0;
 }

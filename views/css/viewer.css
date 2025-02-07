@@ -34,3 +34,29 @@ body {
     font-size: 12px;
     color: gray;
 }
+::-webkit-scrollbar {
+    width: 10px;
+  }
+::-webkit-scrollbar-thumb {
+    background-color: #505050;
+    border-radius: 10px;
+  }
+::-webkit-scrollbar-track {
+    background-color: rgb(113, 113, 113);
+    border-radius: 10px;
+  }
+
+.controller {
+    background: rgba(53, 53, 53, 0.863);
+    border: 0;
+    padding: 10px;
+    color: white;
+    cursor: pointer;
+    transition: 0.2s all;
+    color: grey;
+    border-radius: 10px;
+}
+
+.controller:hover {
+    border-radius: 0;
+}
