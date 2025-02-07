@@ -14,8 +14,6 @@ body {
     background-color: rgb(34, 34, 34);
 }
 
-
-
 .container {
     display: grid;
     grid-template-columns: 200px 1fr;
@@ -24,7 +22,7 @@ body {
 
 .surahs {
     overflow: auto;
-    background-color: #131313;
+    background-color: #1c1c1c;
     height: 100vh;
 }
 
@@ -66,4 +64,24 @@ body {
 
 .info {
     margin: 10px;
+}
+
+.small {
+    font-size: 13px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+}
+
+button {
+    background-color: #00000053;
+    border: 0;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.2s all;
+}
+
+button:hover {
+    background-color: #00000078;
+    border-radius: 0;
 }
